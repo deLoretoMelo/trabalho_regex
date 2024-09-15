@@ -9,16 +9,42 @@ import re
 
 def teste_estresse (lista_teste, funcao):
     # Função que vai fazer o teste de estresse com as respostas de aceitação ou não das cadeias
-    print("")
-    print("")
-    for a in lista_teste:
-        # Formatação do print no console
-        if(funcao(a)):
-            print(f'"{a}" É uma sentença válida')
-        else:
-           print(f'"{a}" Não é uma sentença válida')
-    print("")
-    print("")
+    # condicao para que caso a função seja a g, seguir para um menu de inputs
+    if(funcao.__name__ == 'g'):
+        # Inputs para os valores dos limites x e y (esses valores vão valer para todo o teste de estresse)
+        x = int(input("Coloque um valor para o número x: "))
+        y = int(input("Coloque um valor para o número y: "))
+
+        # Laço para garantir que os valores de x e y sejam: x > 0, y > 0 e x <= y
+        while(x < 0 or y < 0 or x > y):
+            if(x < 0):
+                x = int(input("Coloque outro valor para x que seja maior que 0: "))
+            if(y < 0):
+                y = int(input("Coloque outro valor para y que seja maior que 0: "))
+            if(x > y):
+                x = int(input("Coloque outro valor para x que seja menor ou igual que o de y: "))
+
+        print("")
+        print("")
+        for a in lista_teste:
+            # Formatação do print no console
+            if(funcao(a, x, y)):
+                print(f'"{a}" É uma sentença válida')
+            else:
+                print(f'"{a}" Não é uma sentença válida')
+        print("")
+        print("")
+    else: 
+        print("")
+        print("")
+        for a in lista_teste:
+            # Formatação do print no console
+            if(funcao(a)):
+                print(f'"{a}" É uma sentença válida')
+            else:
+                print(f'"{a}" Não é uma sentença válida')
+        print("")
+        print("")
 
 # Primeira questão (Máscaras de validação)
 def validar_nome(nome):
@@ -140,20 +166,13 @@ def f(arranjo):
 
     return bool(validacao)
 
-def g(arranjo):
+def g(arranjo, x, y):
     # O regex verifica se o arranjo familiar possui adultos dentro dos limites das variáveis x e y com qualquer número de filhos
     # A expressão não pode aceitar que os três últimos filhos sejam homens
-    x = int(input("Coloque um valor para o número x: "))
-    y = int(input("Coloque um valor para o número y: "))
+    
 
-    # Laço para garantir que os valores de x e y sejam: x > 0, y > 0 e x <= y
-    while(x < 0 or y < 0 or x > y):
-        if(x < 0):
-            x = int(input("Coloque outro valor para x que seja maior que 0: "))
-        if(y < 0):
-            y = int(input("Coloque outro valor para y que seja maior que 0: "))
-        if(x > y):
-            x = int(input("Coloque outro valor para x que seja menor ou igual que o de y: "))
+    
+    
     regex = re.compile(f"(H|M){{{x},{y}}}(((h|m)*(m|mh|mhh))|(h|hh))?")
 
     validacao = regex.fullmatch(arranjo)

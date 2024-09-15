@@ -31,4 +31,4 @@ arranjos_g = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
 
 
 #chamada das funções para a execução dos testes
-funcoes.teste_estresse(arranjos_d, funcoes.g)
+funcoes.teste_estresse(arranjos_d, funcoes.d)
