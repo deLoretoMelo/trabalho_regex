@@ -1,4 +1,9 @@
-
+# Alunos:
+# Eduardo Fernandes Albuquerque
+# João Pedro Vasconcelos de Lima
+# Ladielma Carina Santos Teixeira
+# Marcelo Malcher Gillet de Loreto Melo
+# Virgilio Cardoso Dantas Neto
 
 import funcoes
 
