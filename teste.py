@@ -1,3 +1,10 @@
+# Alunos:
+# Eduardo Fernandes Albuquerque
+# João Pedro Vasconcelos de Lima
+# Ladielma Carina Santos Teixeira
+# Marcelo Malcher Gillet de Loreto Melo
+# Virgilio Cardoso Dantas Neto
+
 import funcoes
 
 # Cadeias de teste para o estresse das funções
@@ -27,8 +34,8 @@ arranjos_e = ["HHmhhmh", "MMmhmhm", "HMhmhmhhh", "MMhmhmhmh", "MMhhmhhmhh", "MMh
 
 arranjos_f = ["HHmhmhmmhhmhm", "MMmmmmmmm", "HHmhhmhhmmhhmmmhhmmhh", "HHhmmmmmmmmmmmh", "MMhmhhmh", "HMhmmh", "HHhmhmhhmmh", "MMh", "MMmmhmmmhmmmmh", "MMhm", "HHhhhhhhhh", "MMhmhhh", "HHmhmhm", "HH", "HMmmhmhmhmm"]
 
-arranjos_g = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
+arranjos_g = ["HMHHMHMhhmhhmmhmhh", "MMMMMMhhmhmhhh", "HMHHHh", "Hmmmhhmm", "MMHHMm", "HHHmhhh", "HMMHHHHHHHMHHHHHMMMmmhhmm", "MHHMHMHHMHMHMmmmhhh", "HMHMMMMmmhhmmhh", "HHMHMHMMmhmhmhmmhhh", "HHMMHHMhhhmmmmhhh", "HMMHmhhmhmhmhm", "Mhhmm", "HHMMMMHMHHHMMHMMMmh", "MMMHHH"]
 
 
 #chamada das funções para a execução dos testes
-funcoes.teste_estresse(arranjos_d, funcoes.d)
+funcoes.teste_estresse(arranjos_b, funcoes.b)

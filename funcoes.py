@@ -29,9 +29,9 @@ def teste_estresse (lista_teste, funcao):
         for a in lista_teste:
             # Formatação do print no console
             if(funcao(a, x, y)):
-                print(f'"{a}" É uma sentença válida')
+                print(f'"{a}" É uma sentença válida (cadeia pertecente a linguagem).')
             else:
-                print(f'"{a}" Não é uma sentença válida')
+                print(f'"{a}" Não é uma sentença.')
         print("")
         print("")
     else: 
@@ -40,9 +40,9 @@ def teste_estresse (lista_teste, funcao):
         for a in lista_teste:
             # Formatação do print no console
             if(funcao(a)):
-                print(f'"{a}" É uma sentença válida')
+                print(f'"{a}" É uma sentença válida (cadeia pertecente a linguagem).')
             else:
-                print(f'"{a}" Não é uma sentença válida')
+                print(f'"{a}" Não é uma sentença.')
         print("")
         print("")
 
